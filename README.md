@@ -1,5 +1,9 @@
 # Cricket Score Board 
-![vite logo](./public/vite.svg) ## [React + Vite]
+<h2 style="display: flex; align-items: center;">
+  <img src="./public/vite.svg" alt="vite logo" style="height: 40px; margin-right: 10px;">
+  React + Vite
+</h2>
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 Currently, two official plugins are available:
