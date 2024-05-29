@@ -9,10 +9,16 @@ import './App.css'
 const App = () => {
   const [allClicks, setAll] = useState([]);
   const [dot , setDot] = useState(0)
+  const [wicket , setWicket] = useState(0)
 
   const handleDot = () => {
     setAll(allClicks.concat('*'))
     setDot(dot + 1)
+  }
+
+  const handleWicket = () => {
+    setAll(allClicks.concat('W'))
+    setWicket(wicket + 1)
   }
 
 
@@ -20,7 +26,7 @@ const App = () => {
     <div>
       <Display allClicks={allClicks}/>
       <Button onClick={handleDot} text='Dot' />
-      
+      <Button onClick={handleWicket} text='Wicket' />
     </div>
   )
 }
@@ -29,7 +35,7 @@ const App = () => {
 const Display = ({allClicks}) => {
   return (
     <div>
-      <p><h1>Cricket Score Board</h1></p>
+      <h1>Cricket Score Board</h1>
       <p>Over: {allClicks.join("  ")}</p>
       <h2>Total Score : </h2>
     </div>
