@@ -22,11 +22,11 @@ This project uses two official plugins:
 ### Home Screen
 ![Home Screen](./images/Home.png)
 
-### Start New Game
-![Start New Game](./images/StartNewGame.png)
-
 ### Start New Over
 ![Start New Over](./images/StartNewOver.png)
+
+### Start New Game
+![Start New Game](./images/StartNewGame.png)
 
 ## Getting Started
 
@@ -36,3 +36,24 @@ This project uses two official plugins:
    cd Cricket_Score_Reactpro 
    ```
 
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+## Usage
+
+The application allows you to:
+
+- **Track Runs**: Add runs by clicking the respective buttons (1, 2, 3, 4, 6).
+- **Track Wickets**: Record a wicket by clicking the "Wicket" button.
+- **Record Dot Balls**: Add a dot ball by clicking the "Dot" button.
+- **Handle Wide Balls**: Record a wide ball by clicking the "Wd" button.
+- **Start New Over**: Begin a new over once the current one is completed.
+- **Start New Game**: Reset the entire game to start fresh.
+
+Enjoy building with React and Vite! For any issues or questions, feel free to open an issue on GitHub.
