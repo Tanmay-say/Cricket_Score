@@ -12,22 +12,26 @@ const App = () => {
   const [wicket , setWicket] = useState(0)
   const [run , setRun] = useState(0)
   const [wide , setWide] = useState(0)
+  const [balls , setBall] = useState(0)
 
 
   const handleDot = () => {
     setAll(allClicks.concat('*'))
     setDot(dot + 1)
+    setBall(balls + 1)
   }
 
   const handleWicket = () => {
     setAll(allClicks.concat('W'))
     setWicket(wicket + 1)
+    setBall(balls + 1)
   }
 
   const handleRun = (runs) => {
     setAll(allClicks.concat(runs))
     const newRun = run + runs
     setRun(newRun)
+    setBall(balls + 1)
   }
 
   const handleWide = () => {
@@ -37,7 +41,7 @@ const App = () => {
 
   return (
     <div>
-      <Display allClicks={allClicks} runs={run}/>
+      <Display allClicks={allClicks} runs={run} ball={balls}/>
       <Button onClick={handleDot} text='Dot' />
       <Button onClick={handleWicket} text='Wicket' />
       <Button onClick={handleWide} text='Wd' />
@@ -53,7 +57,16 @@ const App = () => {
 }
 
 
-const Display = ({allClicks , runs}) => {
+const Display = ({allClicks , runs , ball}) => {
+  if (ball === 6) {
+    return (
+      <div>
+        <h1>Over Completed</h1>
+        <History allClicks={allClicks} />
+        <h2>Total Score : {runs} </h2>
+      </div>
+    )
+  }
   return (
     <div>
       <h1>Cricket Score Board</h1>
